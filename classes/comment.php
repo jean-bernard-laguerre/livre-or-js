@@ -15,7 +15,7 @@
 
         public function add() {
 
-            $sql = "INSERT INTO comment (comment, user_id, date) VALUES (?, ?, CURRENT_TIMESTAMP)";
+            $sql = "INSERT INTO comment (content, user_id, date) VALUES (?, ?, CURRENT_TIMESTAMP)";
             $req = $GLOBALS["bdd"]->prepare($sql);
             $req->execute([$this->comment, $this->user_id]);
 
